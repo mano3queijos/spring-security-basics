@@ -1,12 +1,20 @@
 package com.emanuel.seapp;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
 public class HiController {
 
-public String sayHi(){
+    @GetMapping("/hi")
+    public String sayHi() {
+        return "hi";
+    }
 
-    return "hi";
-
-}
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "hello";
+    }
 
 
 }
